@@ -2,13 +2,84 @@
     font-size: .85em;
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
     color: #232323;
-    background-color: #fff;
+    background-color: lightgray;
 }
 
 header, footer, nav, section {
     display: block;
 }
 
+.content-wrapper {
+    border: 0;
+    padding: 0;
+    margin: auto;
+    width: 900px;
+    height: 600px;
+    overflow: hidden;
+}
+
+.products {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    width: 675px;
+    height: 800px;
+    float: left;
+    background: red;
+}
+
+.chat {
+    border: 1px solid gray;
+    padding: 0;
+    margin: 0;
+    width: 224px;
+    height: 600px;
+    float: left;
+    background: green;
+}
+
+#chat-title {
+    padding: 0;
+    height: 10%;
+    font-size: 3em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    text-align: center;
+    color: #232323;
+}
+
+.talks {
+    padding: 0;
+    margin: 0;
+    height: 70%;
+    width: 100%;
+    background: yellow;
+}
+
+.clear-fix {
+    clear: both;
+}
+
+.listitem-style {
+    border-bottom: 1px solid black;
+    background: lightgray;
+    height: 100%;
+    width: 100%;
+}
+
+.chat-message {
+    height: 100%;
+}
+
+#message {
+    width: 100%;
+    height: 70px;
+    resize: none;
+}
+
+#send-button {
+    width: 60%;
+    float: right;
+}
 
 /* Styles for basic forms
 -----------------------------------------------------------*/

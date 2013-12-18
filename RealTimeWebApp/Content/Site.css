@@ -5,6 +5,13 @@
     margin: 0 auto;
 }
 
+.product-cointeiner {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
 .border-top-1-gray {
     border-top: 1px solid gray;
 }
@@ -54,6 +61,14 @@
     word-wrap: break-word;       /* Internet Explorer 5.5+ */
     word-break: break-all;
     white-space: normal;
+}
+
+.font-size-20 {
+    font-size: 20px;
+}
+
+.font-size-16 {
+    font-size: 16px;
 }
 
 .width-100p {

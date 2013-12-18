@@ -16,61 +16,67 @@
         };
 
         productHub.client.updateProducts = function (products) {
-
+            populateGrid(products);
         }
 
 
         $.connection.hub.start()
             .done(function () {
-                getProducts();
-
-                $('#sendButton').click(function () {
-                    var nick = $('#nickHolder').val();
-                    var message = $('#message-holder').val();
-                    chat.server.sendMessage(nick, message);
-                    $('#message-holder').val('').focus();
-                });
-
-
-
-                $('good').click(function (e) {
-                    var id = e.target.parent().parent().id;
-                    productHub.server.UpdateVotes(id);
-                });
-                $('bad').click(function (e) {
-                    productHub.server.UpdateVotes(id);
-                });
-
+                initProducts();
+                initChat();
             })
             .fail(function () {
                 console.log("Nie udalo sie");
             });
 
-        function getProducts() {
+        function initProducts() {
             return productHub.server.getAllProducts()
                 .done(function (products) {
-                    $.each(products, function (index, value) {
-                        $('#productsHolder').append(
-                            '<div id="'+ (index + 1) + '" class="col-md-4">' +
-                                '<h2>' + value.Name + '</h2>' +
-                                '<p class="font-size-16">' + value.Desc + '</p>' +
-                                '<p class="font-size-20">' + value.Price + '</p>' +
-                                '<div class="pull-left">' +
-                                    '<div>' + value.UpVote + '</div>' +
-                                    '<a href="#" class="good"><img class="good" src="../Content/img/up.png" width="32" height="32" /></a>' +
-                                '</div>' +
-                                '<div class="pull-right">' +
-                                    '<div>' + value.DownVote + '</div>' +
-                                    '<a href="#" class="bad"><img class="bad" src="../Content/img/down.png" width="32" height="32" /></a>' +
-                                '</div>' + 
-                            '</div>'
-                        );
-                    });
+                    populateGrid(products);
                 })
                 .fail(function () {
 
                 });
-        }
+        };
+
+        function initChat() {
+            $('#sendButton').click(function () {
+                var nick = $('#nickHolder').val();
+                var message = $('#message-holder').val();
+                chat.server.sendMessage(nick, message);
+                $('#message-holder').val('').focus();
+            });
+        };
+        
+        function populateGrid(products) {
+            $.each(products, function (index, value) {
+                $('#productsHolder').html('');
+                $('#productsHolder').append(
+                    '<div id="' + (index + 1) + '" class="col-md-4">' +
+                        '<h2>' + value.Name + '</h2>' +
+                        '<p class="font-size-16">' + value.Desc + '</p>' +
+                        '<p class="font-size-20">' + value.Price + '</p>' +
+                        '<div class="pull-left">' +
+                            '<div>' + value.UpVote + '</div>' +
+                            '<a id=' + (index + 1) + ' href="#" class="good"><img id=' + (index + 1) + ' src="../Content/img/up.png" width="32" height="32" /></a>' +
+                        '</div>' +
+                        '<div class="pull-right">' +
+                            '<div>' + value.DownVote + '</div>' +
+                            '<a id=' + (index + 1) + ' href="#" class="bad"><img id=' + (index + 1) + ' src="../Content/img/down.png" width="32" height="32" /></a>' +
+                        '</div>' +
+                    '</div>'
+                );
+            });
+
+            $('.good').click(function (e) {
+                var id = e.target.id;
+                productHub.server.updateVotes(id - 1, true);
+            });
+            $('.bad').click(function (e) {
+                var id = e.target.id;
+                productHub.server.updateVotes(id - 1, false);
+            });
+        };
 
     });
 });

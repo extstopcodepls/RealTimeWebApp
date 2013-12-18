@@ -13,7 +13,7 @@ namespace RealTimeWebApp.DataSource
 		{
 			Products = new List<Product>
 			{
-				new Product { id = 1, Name = "LOL", Desc = "Trololol trolololo rlolololrolo rloloo", Price = "12,12", UpVote = 0, DownVote = 0}
+				new Product { Id = 1, Name = "LOL", Desc = "Trololol trolololo rlolololrolo rloloo", Price = "12,12", UpVote = 0, DownVote = 0}
 			};
 		}
 	}

@@ -14,8 +14,17 @@ namespace RealTimeWebApp.Hubs
 			return DataRepository.Products;
 		}
 
-		public void UpdateVotes(int id)
+		public void UpdateVotes(int id, bool doUpvote)
 		{
+			if (doUpvote)
+			{
+				DataRepository.Products.ElementAt(id).UpVote++;
+			}
+			else
+			{
+				DataRepository.Products.ElementAt(id).DownVote++;		
+			}
+
 			Clients.All.updateProducts(DataRepository.Products);
 		}
 	}

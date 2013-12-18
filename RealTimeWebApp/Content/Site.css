@@ -1,5 +1,4 @@
-﻿
-.container {
+﻿.container {
     width: 900px;
     height: 300px;
     margin: 0 auto;
@@ -30,7 +29,7 @@
 
 .talkscontainer {
     height: 400px;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .list-item-gray {

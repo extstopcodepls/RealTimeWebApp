@@ -27,6 +27,11 @@ namespace RealTimeWebApp
 
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include("~/Scripts/bootstrap.js"));
+            bundles.Add(new ScriptBundle("~/bundles/signalr").Include("~/Scripts/jquery.signalR-{version}.js"));
+            bundles.Add(new ScriptBundle("~/bundles/signalr/hubs").Include("~/signalr/hubs"));
+            bundles.Add(new ScriptBundle("~/bundles/app").Include("~/Scripts/app.js"));
+
+
 
             bundles.Add(new StyleBundle("~/Content/css").Include("~/Content/site.css"));
 

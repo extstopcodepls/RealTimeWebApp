@@ -2,28 +2,34 @@
     ViewBag.Title = "Index";
 }
 
-<div class="content-wrapper">
-    <div class="products">
-
+<div class="container">
+    <div class="row">
+        <div id="produkty" class="col-md-8">
+            <div>
+                <h1 class="border-bottom-1-gray">Produkty</h1>
+            </div>
+        </div>
+        <div id="chat" class="col-md-4">
+            <div>
+                <h1 class="border-bottom-1-gray">Chat</h1>
+                <div class="talkscontainer">
+                    <ul class="list-unstyled">
+                        <li id="1" class="list-item-gray">
+                            <div class="pull-left padding-right-10 font-bold">Ksywa:</div>
+                            <div class="pull-left padding-right-15 wrapword">Wiadomość</div>
+                            <div class="clearfix"></div>
+                        </li>
+                        <li class="list-item-gray">
+                            <div class="pull-left padding-right-10 font-bold">Ksywa:</div>
+                            <div class="pull-left padding-right-15 wrapword">Wiadomość</div>
+                            <div class="clearfix"></div>
+                        </li>
+                    </ul>
+                </div>
+                <textarea class="width-30p height-40px margin-bottom-10" placeholder="Nick..."></textarea>
+                <textarea id="message-holder" class="width-100p margin-bottom-10" placeholder="Treść wiadomości"></textarea>
+                <button type="button" id="sendButton" class="btn btn-primary">Wyślij</button>
+            </div>
+        </div>
     </div>
-    <div class="chat">
-        <div id="chat-title">
-            Chat
-        </div>
-        <div class="talks">
-            <ul class="list-unstyled ">
-                <li class="listitem-style">
-                    LOL
-                </li>
-                <li class="listitem-style">LOL</li>
-                <li class="listitem-style">LOL</li>
-                <li class="listitem-style">LOL</li>
-            </ul>
-        </div>
-        <div class="chat-message">
-            <textarea disabled="disabled" id="message"></textarea>
-            <button type="button" id="send-button" class="btn btn-primary">Wyślij</button>
-        </div>
-    </div>
-    <div class="clear-fix"></div>
 </div>

@@ -1,111 +1,76 @@
-﻿body {
-    font-size: .85em;
-    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
-    color: #232323;
-    background-color: lightgray;
-}
-
-header, footer, nav, section {
-    display: block;
-}
-
-.content-wrapper {
-    border: 0;
-    padding: 0;
-    margin: auto;
+﻿
+.container {
     width: 900px;
-    height: 600px;
-    overflow: hidden;
+    height: 300px;
+    margin: 0 auto;
 }
 
-.products {
-    border: 0;
-    padding: 0;
-    margin: 0;
-    width: 675px;
-    height: 800px;
-    float: left;
-    background: red;
+.border-top-1-gray {
+    border-top: 1px solid gray;
 }
 
-.chat {
-    border: 1px solid gray;
-    padding: 0;
-    margin: 0;
-    width: 224px;
-    height: 600px;
-    float: left;
-    background: green;
+.border-bottom-1-gray {
+    border-bottom: 1px solid gray;
 }
 
-#chat-title {
-    padding: 0;
-    height: 10%;
-    font-size: 3em;
-    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
-    text-align: center;
-    color: #232323;
+.border-left-1-gray {
+    border-left: 1px solid gray;
 }
 
-.talks {
-    padding: 0;
-    margin: 0;
-    height: 70%;
-    width: 100%;
-    background: yellow;
+.border-right-1-gray {
+    border-right: 1px solid gray;
 }
 
-.clear-fix {
-    clear: both;
+.talkscontainer {
+    height: 400px;
+    overflow: scroll;
 }
 
-.listitem-style {
-    border-bottom: 1px solid black;
+.list-item-gray {
     background: lightgray;
-    height: 100%;
-    width: 100%;
 }
 
-.chat-message {
-    height: 100%;
+.list-item-white {
+    background: white;
 }
 
-#message {
-    width: 100%;
-    height: 70px;
-    resize: none;
+.padding-right-10 {
+    padding-right: 10px;
 }
 
-#send-button {
-    width: 60%;
-    float: right;
+.margin-bottom-10 {
+    margin-bottom: 10px;
 }
 
-/* Styles for basic forms
------------------------------------------------------------*/
-fieldset {
-    border: 1px solid #ddd;
-    padding: 0 1.4em 1.4em 1.4em;
-    margin: 0 0 1.5em 0;
-}
-
-legend {
-    font-size: 1.2em;
+.font-bold {
     font-weight: bold;
 }
 
+.wrapword{
+    white-space: -moz-pre-wrap !important;  /* Mozilla, since 1999 */
+    white-space: -pre-wrap;      /* Opera 4-6 */
+    white-space: -o-pre-wrap;    /* Opera 7 */
+    white-space: pre-wrap;       /* css-3 */
+    word-wrap: break-word;       /* Internet Explorer 5.5+ */
+    word-break: break-all;
+    white-space: normal;
+}
+
+.width-100p {
+    width: 100%;
+}
+
+.width-30p {
+    width: 30%;
+}
+
+.height-40px {
+    height: 40px;
+}
+
 textarea {
-    min-height: 75px;
+    resize: none;
 }
-
-.editor-label {
-    margin: 1em 0 0 0;
-}
-
-.editor-field {
-    margin: 0.5em 0 0 0;
-}
-
 
 /* Styles for validation helpers
 -----------------------------------------------------------*/

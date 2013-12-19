@@ -6,6 +6,7 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Styles.Render("~/Content/bootstrapcss")
+    @Styles.Render("~/Content/toastr")
     @Scripts.Render("~/bundles/modernizr")
 </head>
 <body>
@@ -21,6 +22,7 @@
     <script type="text/javascript" src="/signalr/hubs"></script>
 
     @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/toastr")
     @Scripts.Render("~/bundles/app")
     @RenderSection("scripts", required: false)
 </body>

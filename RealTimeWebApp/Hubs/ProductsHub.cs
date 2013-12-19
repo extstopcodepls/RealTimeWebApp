@@ -50,6 +50,7 @@ namespace RealTimeWebApp.Hubs
 			DataRepository.Products.Add(new Product { Id = newLastId, Name = name, Desc = description, Price = price, DownVote = 0, UpVote = 0 });
 
 			Clients.All.updateProducts(DataRepository.Products);
+			Clients.All.addedProduct();
 		}
 
 	}

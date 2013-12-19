@@ -4,6 +4,23 @@
 
 <div class="">
     <h1 class="border-bottom-1-gray">Panel Admina - Sekcja produktów</h1>
+    <div class="row">
+        <div class="col-md-2">
+            <label for="productname">Nazwa produktu</label>
+            <input id="productName" type="text" name="productname" class="form-control" />
+        </div>
+        <div class="col-md-2">
+            <label for="desc">Opis produktu</label>
+            <input id="productDesc" type="text" name="desc" class="form-control" />
+        </div>
+        <div class="col-md-2">
+            <label for="price">Cena</label>
+            <input id="productPrice" type="text" name="price" class="form-control" />
+        </div>
+        <div class="col-md-2">
+            <button style="margin-top: 25px;" id="addProduct" type="button" class="btn btn-primary">Dodaj</button>
+        </div>
+    </div>
     <div class="table-responsive">
         <table class="table">
             <thead>
@@ -20,18 +37,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>1</td>
-                    <td>Szuraka</td>
-                    <td>Opis</td>
-                    <td>Cena</td>
-                    <td>12</td>
-                    <td>10</td>
-                    <td>
-                        <button id="resetButton" type="button" class="btn btn-primary">Reset</button>
-                    </td>
-                    <td>
-                        <button id="removeButton" type="button" class="btn btn-primary">Remove</button>
-                    </td>
+                    
                 </tr>
             </tbody>
         </table>

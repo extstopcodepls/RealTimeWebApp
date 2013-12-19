@@ -36,6 +36,11 @@
                 .done(function (products) {
                     populateGrid(products);
                     populateTable(products);
+
+                    $('#addProduct').click(function () {
+                        addNewProduct();
+                    });
+
                 })
                 .fail(function () {
 
@@ -73,6 +78,12 @@
                 var id = e.target.id;
                 productHub.server.resetUpvotes(id);
             });
+
+            $('.removeButton').click(function (e) {
+                var id = e.target.id;
+                productHub.server.removeProduct(id);
+            });
+
         };
 
         function populateGrid(products) {
@@ -81,8 +92,10 @@
                 $('#productsHolder').append(
                     '<div class="col-md-4">' +
                         '<h2>' + value.Name + '</h2>' +
-                        '<p class="font-size-16">' + value.Desc + '</p>' +
-                        '<p class="font-size-20">' + value.Price + '</p>' +
+                        '<div class="height-120px">' +
+                            '<p class="font-size-16 height-70px">' + value.Desc + '</p>' +
+                            '<p class="font-size-20">' + value.Price + '</p>' +
+                        '</div>' +
                         '<div class="pull-left">' +
                             '<div>' + value.UpVote + '</div>' +
                             '<a href="#" class="good"><img id=' + value.Id + ' src="../Content/img/up.png" width="32" height="32" /></a>' +
@@ -104,6 +117,16 @@
                 productHub.server.updateVotes(id - 1, false);
             });
         };
+
+        function addNewProduct() {
+            var productName = $('#productName').val();
+            var productDescription = $('#productDesc').val();
+            var productPrice = $('#productPrice').val();
+
+            productHub.server.addProduct(productName, productDescription, productPrice);
+
+
+        }
 
         function showMessageSender(name) {
             setInterval(function myfunction() {

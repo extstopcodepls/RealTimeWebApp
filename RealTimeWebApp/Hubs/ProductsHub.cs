@@ -37,5 +37,20 @@ namespace RealTimeWebApp.Hubs
 			Clients.All.updateProducts(DataRepository.Products);
 		}
 
+		public void RemoveProduct(int id)
+		{
+			var productToRemove = DataRepository.Products.SingleOrDefault(p => p.Id == id);
+			DataRepository.Products.Remove(productToRemove);
+			Clients.All.updateProducts(DataRepository.Products);
+		}
+
+		public void AddProduct(string name, string description, string price)
+		{
+			var newLastId = DataRepository.Products.Last().Id + 1;
+			DataRepository.Products.Add(new Product { Id = newLastId, Name = name, Desc = description, Price = price, DownVote = 0, UpVote = 0 });
+
+			Clients.All.updateProducts(DataRepository.Products);
+		}
+
 	}
 }

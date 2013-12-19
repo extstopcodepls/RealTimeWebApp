@@ -27,5 +27,15 @@ namespace RealTimeWebApp.Hubs
 
 			Clients.All.updateProducts(DataRepository.Products);
 		}
+
+		public void ResetUpvotes(int id)
+		{
+			var product = DataRepository.Products.SingleOrDefault(p => p.Id == id);
+			product.DownVote = 0;
+			product.UpVote = 0;
+
+			Clients.All.updateProducts(DataRepository.Products);
+		}
+
 	}
 }

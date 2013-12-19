@@ -13,7 +13,16 @@ namespace RealTimeWebApp.DataSource
 		{
 			Products = new List<Product>
 			{
-				new Product { Id = 1, Name = "LOL", Desc = "Trololol trolololo rlolololrolo rloloo", Price = "12,12", UpVote = 0, DownVote = 0}
+				new Product { Id = 1, Name = "Szusarka", Desc = "Przepiękny opis tej Szusarki, jako, że najlepszy produkt na wigilijnym stole", Price = "999,99 Zł, bo Mango", UpVote = 0, DownVote = 0},
+				new Product { Id = 2, Name = "Szusareczka", Desc = "Przepiękny opis tej Szusarki, jako, że najlepszy produkt na wigilijnym stole", Price = "999,99 Zł, bo Mango", UpVote = 0, DownVote = 0},
+				new Product { Id = 3, Name = "Szusarka", Desc = "Przepiękny opis tej Szusarki, jako, że najlepszy produkt na wigilijnym stole", Price = "999,99 Zł, bo Mango", UpVote = 0, DownVote = 0},
+				new Product { Id = 4, Name = "Szusarka", Desc = "Przepiękny opis tej Szusarki, jako, że najlepszy produkt na wigilijnym stole", Price = "999,99 Zł, bo Mango", UpVote = 0, DownVote = 0},
+				new Product { Id = 5, Name = "Szusarka", Desc = "Przepiękny opis tej Szusarki, jako, że najlepszy produkt na wigilijnym stole", Price = "999,99 Zł, bo Mango", UpVote = 0, DownVote = 0},
+				new Product { Id = 6, Name = "Szusarka", Desc = "Przepiękny opis tej Szusarki, jako, że najlepszy produkt na wigilijnym stole", Price = "999,99 Zł, bo Mango", UpVote = 0, DownVote = 0},
+				new Product { Id = 7, Name = "Szusarka", Desc = "Przepiękny opis tej Szusarki, jako, że najlepszy produkt na wigilijnym stole", Price = "999,99 Zł, bo Mango", UpVote = 0, DownVote = 0},
+				new Product { Id = 8, Name = "Szusarka", Desc = "Przepiękny opis tej Szusarki, jako, że najlepszy produkt na wigilijnym stole", Price = "999,99 Zł, bo Mango", UpVote = 0, DownVote = 0},
+				new Product { Id = 9, Name = "Szusarka", Desc = "Przepiękny opis tej Szusarki, jako, że najlepszy produkt na wigilijnym stole", Price = "999,99 Zł, bo Mango", UpVote = 0, DownVote = 0},
+				new Product { Id = 10, Name = "Szusarka", Desc = "Przepiękny opis tej Szusarki, jako, że najlepszy produkt na wigilijnym stole", Price = "999,99 Zł, bo Mango", UpVote = 0, DownVote = 0}
 			};
 		}
 	}

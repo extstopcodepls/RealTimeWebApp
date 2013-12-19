@@ -13,10 +13,12 @@
                                             '<div class="pull-left padding-right-15 wrapword">' + message + '</div>' +
                                             '<div class="clearfix"></div>' +
                                       '</li>');
+            showMessageSender(name);
         };
 
         productHub.client.updateProducts = function (products) {
             populateGrid(products);
+            populateTable(products);
         }
 
 
@@ -33,6 +35,7 @@
             return productHub.server.getAllProducts()
                 .done(function (products) {
                     populateGrid(products);
+                    populateTable(products);
                 })
                 .fail(function () {
 
@@ -47,22 +50,46 @@
                 $('#message-holder').val('').focus();
             });
         };
-        
-        function populateGrid(products) {
+
+
+        function populateTable(products) {
+            $('tbody').html('');
             $.each(products, function (index, value) {
-                $('#productsHolder').html('');
+                $('tbody').append(
+                    '<tr>' +
+                        '<td>' + value.Id + '</td>' +
+                        '<td>' + value.Name + '</td>' +
+                        '<td>' + value.Desc + '</td>' +
+                        '<td>' + value.Price + '</td>' +
+                        '<td>' + value.UpVote + '</td>' +
+                        '<td>' + value.DownVote + '</td>' +
+                        '<td><button id="' + value.Id + '" type="button" class="btn btn-primary resetButton">Reset</button>' +
+                        '<td><button id="' + value.Id + '" type="button" class="btn btn-primary removeButton">Remove</button>' +
+                    '</td>'
+                );
+            });
+
+            $('.resetButton').click(function (e) {
+                var id = e.target.id;
+                productHub.server.resetUpvotes(id);
+            });
+        };
+
+        function populateGrid(products) {
+            $('#productsHolder').html('');
+            $.each(products, function (index, value) {
                 $('#productsHolder').append(
-                    '<div id="' + (index + 1) + '" class="col-md-4">' +
+                    '<div class="col-md-4">' +
                         '<h2>' + value.Name + '</h2>' +
                         '<p class="font-size-16">' + value.Desc + '</p>' +
                         '<p class="font-size-20">' + value.Price + '</p>' +
                         '<div class="pull-left">' +
                             '<div>' + value.UpVote + '</div>' +
-                            '<a id=' + (index + 1) + ' href="#" class="good"><img id=' + (index + 1) + ' src="../Content/img/up.png" width="32" height="32" /></a>' +
+                            '<a href="#" class="good"><img id=' + value.Id + ' src="../Content/img/up.png" width="32" height="32" /></a>' +
                         '</div>' +
                         '<div class="pull-right">' +
                             '<div>' + value.DownVote + '</div>' +
-                            '<a id=' + (index + 1) + ' href="#" class="bad"><img id=' + (index + 1) + ' src="../Content/img/down.png" width="32" height="32" /></a>' +
+                            '<a href="#" class="bad"><img id=' + value.Id + ' src="../Content/img/down.png" width="32" height="32" /></a>' +
                         '</div>' +
                     '</div>'
                 );
@@ -76,6 +103,15 @@
                 var id = e.target.id;
                 productHub.server.updateVotes(id - 1, false);
             });
+        };
+
+        function showMessageSender(name) {
+            setInterval(function myfunction() {
+                document.title = name + ' napisał!';
+                setTimeout(function myfunction() {
+                    document.title = '';
+                }, 1000);
+            }, 2000);
         };
 
     });

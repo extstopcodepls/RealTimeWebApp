@@ -13,16 +13,13 @@ namespace RealTimeWebApp.DataSource
 		{
 			Products = new List<Product>
 			{
-				new Product { Id = 1, Name = "Szusarka", Desc = "Przepiękny opis tej Szusarki, jako, że najlepszy produkt na wigilijnym stole", Price = "999,99 Zł, bo Mango", UpVote = 0, DownVote = 0},
-				new Product { Id = 2, Name = "Szusareczka", Desc = "Przepiękny opis tej Szusarki, jako, że najlepszy produkt na wigilijnym stole", Price = "999,99 Zł, bo Mango", UpVote = 0, DownVote = 0},
-				new Product { Id = 3, Name = "Szusarka", Desc = "Przepiękny opis tej Szusarki, jako, że najlepszy produkt na wigilijnym stole", Price = "999,99 Zł, bo Mango", UpVote = 0, DownVote = 0},
-				new Product { Id = 4, Name = "Szusarka", Desc = "Przepiękny opis tej Szusarki, jako, że najlepszy produkt na wigilijnym stole", Price = "999,99 Zł, bo Mango", UpVote = 0, DownVote = 0},
-				new Product { Id = 5, Name = "Szusarka", Desc = "Przepiękny opis tej Szusarki, jako, że najlepszy produkt na wigilijnym stole", Price = "999,99 Zł, bo Mango", UpVote = 0, DownVote = 0},
-				new Product { Id = 6, Name = "Szusarka", Desc = "Przepiękny opis tej Szusarki, jako, że najlepszy produkt na wigilijnym stole", Price = "999,99 Zł, bo Mango", UpVote = 0, DownVote = 0},
-				new Product { Id = 7, Name = "Szusarka", Desc = "Przepiękny opis tej Szusarki, jako, że najlepszy produkt na wigilijnym stole", Price = "999,99 Zł, bo Mango", UpVote = 0, DownVote = 0},
-				new Product { Id = 8, Name = "Szusarka", Desc = "Przepiękny opis tej Szusarki, jako, że najlepszy produkt na wigilijnym stole", Price = "999,99 Zł, bo Mango", UpVote = 0, DownVote = 0},
-				new Product { Id = 9, Name = "Szusarka", Desc = "Przepiękny opis tej Szusarki, jako, że najlepszy produkt na wigilijnym stole", Price = "999,99 Zł, bo Mango", UpVote = 0, DownVote = 0},
-				new Product { Id = 10, Name = "Szusarka", Desc = "Przepiękny opis tej Szusarki, jako, że najlepszy produkt na wigilijnym stole", Price = "999,99 Zł, bo Mango", UpVote = 0, DownVote = 0}
+				new Product { Id = 1, Name = "Suszarka", Desc = "Opis suszarki", Price = "999,99 Zł", UpVote = 0, DownVote = 0},
+				new Product { Id = 1, Name = "Pralka", Desc = "Opis pralki", Price = "999,99 Zł", UpVote = 0, DownVote = 0},
+				new Product { Id = 1, Name = "Widelec", Desc = "Opis widelca", Price = "999,99 Zł", UpVote = 0, DownVote = 0},
+				new Product { Id = 1, Name = "Nóż", Desc = "Opis noża", Price = "999,99 Zł", UpVote = 0, DownVote = 0},
+				new Product { Id = 1, Name = "A Nuż", Desc = "Opis a nuż", Price = "999,99 Zł", UpVote = 0, DownVote = 0},
+				new Product { Id = 1, Name = "Talerzyk", Desc = "Opis talerzyka", Price = "999,99 Zł", UpVote = 0, DownVote = 0},
+				new Product { Id = 1, Name = "Miseczka", Desc = "Opis miseczki", Price = "999,99 Zł", UpVote = 0, DownVote = 0}
 			};
 		}
 	}
